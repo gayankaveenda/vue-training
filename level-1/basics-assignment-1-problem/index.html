@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue@3.4.9/dist/vue.global.js"></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <section id="assignment">
+      <!-- 1) Output your name -->
+      <label for="name">Enter Your Name </label>
+      <input type="text" id="name" value="Your Name" v-model="enteredName" onchange="addName()"/>
+      <h2>{{enteredName}}</h2>
+      <!-- 2) Output your age -->
+      <label for="name">Enter Your Age </label>
+      <input type="text" id="age" value="Your Age" v-model="enteredAge" onchange="addAge()"/>
+      <p>{{enteredAge}}</p>
+      <!-- 3) Output your age + 5 -->
+      <p>YOUR AGE in 5 years {{addAge()}}</p>
+      <!-- 4) Output a random number (0 to 1) -->
+      <p>Favorite Number: RANDOM NUMBER BETWEEN 0 AND 1 is {{addRandom()}}</p>
+      <div>
+        <!-- 5) Display some image you found via Google -->
+        <img v-bind:src="addImage()" />
+      </div>
+    </section>
+  </body>
+</html>
