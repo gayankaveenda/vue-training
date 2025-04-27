@@ -2,8 +2,7 @@ const app = Vue.createApp({
     data() {
         return {
             enteredName: "",
-            enteredAge: 0,
-            ageInFiveYrs: 0,
+            enteredAge: 0,            
             image: "https://www.w3schools.com/w3images/lights.jpg",
             goals: []
         };
@@ -14,8 +13,7 @@ const app = Vue.createApp({
             this.enteredValue = "";
         }, 
         addAge() {
-            this.ageInFiveYrs = Number(this.enteredAge) + 5;
-            return this.ageInFiveYrs;
+            return this.enteredAge + 5;
         },
         addRandom() {
             let randomNumber = Math.random(1);

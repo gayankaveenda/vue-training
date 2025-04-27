@@ -20,7 +20,7 @@
       <h2>{{enteredName}}</h2>
       <!-- 2) Output your age -->
       <label for="name">Enter Your Age </label>
-      <input type="text" id="age" value="Your Age" v-model="enteredAge" onchange="addAge()"/>
+      <input type="number" id="age" value="Your Age" v-model="enteredAge" onchange="addAge()"/>
       <p>{{enteredAge}}</p>
       <!-- 3) Output your age + 5 -->
       <p>YOUR AGE in 5 years {{addAge()}}</p>
